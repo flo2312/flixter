@@ -5,4 +5,6 @@ class Course < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :cost, presence: true, numericality: {greater_than_or_equal_to: 0}
+
+  mount_uploader :image, ImageUploader
 end
